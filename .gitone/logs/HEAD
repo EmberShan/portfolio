@@ -1,0 +1,18 @@
+0000000000000000000000000000000000000000 d6535c195d758f74bfedf2f630fb3cb35ee21908 ember2000 <zshan@email.wm.edu> 1647563501 -0400	commit (initial): Initialize project using Create React App
+d6535c195d758f74bfedf2f630fb3cb35ee21908 51b5669ae458418e6d0457db9f7004d358e357ad ember2000 <zshan@email.wm.edu> 1647703315 -0400	commit: added files
+51b5669ae458418e6d0457db9f7004d358e357ad 20c0b432f806860b6da9a4fd79ce64f366064cfd ember2000 <zshan@email.wm.edu> 1647739675 -0400	commit: save before adding scroll animation
+20c0b432f806860b6da9a4fd79ce64f366064cfd f47479ebd8f89d8764318d9303b70a89eaad0bdf ember2000 <zshan@email.wm.edu> 1647742850 -0400	commit: added scroll animaiton using react-scroll-motion
+f47479ebd8f89d8764318d9303b70a89eaad0bdf 8011bb2d15cdffc69b393a9332a0a37998c9f23f ember2000 <zshan@email.wm.edu> 1647743478 -0400	commit: deployed
+8011bb2d15cdffc69b393a9332a0a37998c9f23f 77fbb06a15665d84ce0045101730cf7536bd32f5 ember2000 <zshan@email.wm.edu> 1647743678 -0400	commit: changed id
+77fbb06a15665d84ce0045101730cf7536bd32f5 061f0c3b934ef7cf99b4eddb60a4e64102990701 ember2000 <zshan@email.wm.edu> 1647744733 -0400	commit: changed back without using the react-scroll-motion
+061f0c3b934ef7cf99b4eddb60a4e64102990701 e03cd397bfd2d3048b380cbcf3d103a3843d2ee9 ember2000 <zshan@email.wm.edu> 1647779570 -0400	commit: adjusting inconsistencies of font sizes on iphones
+e03cd397bfd2d3048b380cbcf3d103a3843d2ee9 9267525dc307885c930cccd3344342dc734d8630 ember2000 <zshan@email.wm.edu> 1647782150 -0400	commit: save before adding scroll event handler
+9267525dc307885c930cccd3344342dc734d8630 fcfee0bbe404548cd86385a983340a9681990b9e ember2000 <zshan@email.wm.edu> 1647782739 -0400	commit: added hiding menu when scrolling
+fcfee0bbe404548cd86385a983340a9681990b9e 33d7790fd54d679a4cf475de620c05958838a239 ember2000 <zshan@email.wm.edu> 1647783688 -0400	commit: make navbar only disappear when on desktop
+33d7790fd54d679a4cf475de620c05958838a239 ca76a5bea55c25883e5e1e4e7c4b086f3c617c55 ember2000 <zshan@email.wm.edu> 1647799364 -0400	commit: trying to hide custom curosr on tablet
+ca76a5bea55c25883e5e1e4e7c4b086f3c617c55 11af6eee8834ed3183e68b204dcbb0ba6c2dd09c ember2000 <zshan@email.wm.edu> 1647803714 -0400	commit: push
+11af6eee8834ed3183e68b204dcbb0ba6c2dd09c 497d2baf5834d8f54a3312b71ad71edc2020c7c1 ember2000 <zshan@email.wm.edu> 1647821646 -0400	commit: save before adding gallery slider
+497d2baf5834d8f54a3312b71ad71edc2020c7c1 868055bdc4993cc8a6dfbc31fd589b1106e261ac ember2000 <zshan@email.wm.edu> 1647823305 -0400	commit: added a loader
+868055bdc4993cc8a6dfbc31fd589b1106e261ac c32329e56daf7b8b71923bf1550107bc5b199bad ember2000 <zshan@email.wm.edu> 1647872189 -0400	commit: added carousel component.
+c32329e56daf7b8b71923bf1550107bc5b199bad 1b07a16414b9132fbb3b454025b0a59345851a91 ember2000 <zshan@email.wm.edu> 1647874142 -0400	commit: added django video
+1b07a16414b9132fbb3b454025b0a59345851a91 c44ada11192510907b2f06ee4280bf4903cd41a1 ember2000 <zshan@email.wm.edu> 1647875309 -0400	commit: cleaned up abit

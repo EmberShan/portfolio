@@ -1,0 +1,59 @@
+@use '../../components/Constant.scss' as c;
+@use '../../components/animations/strikethrough.scss' as a;
+
+// mobile first
+
+// full pages
+.page1{
+    text-align: center;
+    .title{
+        margin-bottom: 5%;
+    }
+}
+
+.page2{
+    
+    .link{
+        position: absolute;
+        bottom: 8%;
+        right: 0;
+        z-index: 3;
+        background-color: c.$cursor;
+        padding: 10px 20px;
+        a{
+            width: auto;
+            white-space: nowrap;
+            font-size: 2rem;
+            @include c.no-text-style;
+        }
+        
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .page2{
+        .link{
+            a{
+                position: relative;
+                font-size: 5rem;
+            }
+            &:hover{
+                a::after{
+                    @include a.strikethrough;
+                    top: 50%;
+                    height: 10px;
+                }
+            }   
+            
+        }
+    
+    }
+    
+}
+
+
+// large screen to expand the nav for 13+inch screens
+@media screen and (min-width: 1140px) {
+
+}

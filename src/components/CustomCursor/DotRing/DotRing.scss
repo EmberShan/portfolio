@@ -1,0 +1,90 @@
+@use '../../Constant' as c;
+$ring_size: 60px;
+$dot_size: 10px;
+
+@media screen and (min-width: 1140px) {
+  .cursor{
+    transition: opacity .3 ease-in-out;
+    &.cursor--hidden {
+      opacity: 0;
+    }
+    &.cursor--clicked{
+      transition: all .3 cubic-bezier(0.075, 0.82, 0.165, 1);
+      .ring{
+        width: $ring_size + 20px;
+        height: $ring_size + 20px;
+        background-color: #fefefe;
+      }
+      .dot{
+        opacity: 0;
+      }
+    }
+
+  }
+
+  .ring, .dot{
+    mix-blend-mode: difference;
+
+    
+
+    &.ring {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: $ring_size;
+      height: $ring_size;
+      border: 2px solid c.$font1;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+
+      -webkit-transition-duration: 100ms;
+      transition-duration: 200ms; //speed that the ring will follow the dot
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+      will-change: width, height, transform, border;
+      z-index: 9999999;
+      pointer-events: none;
+
+      &.hovered{
+        animation: rotate 1.4s ease infinite;
+        animation-direction: alternate;
+      }
+
+      &.hide{
+        display: none;
+      }
+    }
+    
+    &.dot {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: $dot_size;
+      height: $dot_size;
+      background-color: c.$cursor;
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+      z-index: 9999999;
+      pointer-events: none;
+
+      &.hovered{
+        width: $dot_size + 10px;
+        height: $dot_size + 10px;
+      }
+
+      &.hide{
+        display: none;
+      }
+
+    }
+  }
+  
+  @keyframes rotate {
+    100% {
+      width: $ring_size + 30px;
+      height: $ring_size + 30px;
+    }
+  }
+
+}
+

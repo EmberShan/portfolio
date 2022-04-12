@@ -1,0 +1,162 @@
+@use '../Constant' as c;
+@use '../animations/strikethrough.scss' as a;
+
+$nav-toggler-size: 50px; //width and height
+
+// mobile first 
+.NavBar{
+    font-family: 'Squada One', sans-serif;
+    
+    padding: 0;
+    background-color: transparent;
+    // fixed nav bar
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+
+    transition: top .4s ease-in-out;
+
+    // make the menu to fit the whole screen
+    .nav-menu{
+        background-color: c.$nav_bg;
+        list-style: none;
+
+        min-height: 100vh;
+        width: 100vw;
+        padding: 100px;
+
+        // display
+        display: none;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+        // ignore the height of the nav toggler 
+        transform: translateY(-$nav-toggler-size);
+        
+        &.active{
+            display: flex;
+        }
+        
+
+        .nav_links{
+            font-size: 1.3rem;
+            text-decoration: none;
+            color: c.$link !important;
+        }
+
+    }
+    
+    // toggler animation 
+    .nav-toggler{
+        z-index: 100;
+        width: $nav-toggler-size;
+        height: $nav-toggler-size;
+        // align to right 
+        margin-left: auto; 
+        margin-right: 30px;
+        padding-top: 40px;
+
+        position: relative;
+        // animation 
+        transition: .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        .nav-toggler-icon{
+            width: $nav-toggler-size;
+            height: $nav-toggler-size;
+            display: flex;
+
+            .nav-toggler-bar{
+                display: block;
+                position: absolute;
+                height: 3px;
+                width: $nav-toggler-size;
+                background-color: c.$link;
+                border-radius: 1px;
+                opacity: 1;
+                right: 0;
+                transform: rotate(0deg);
+                transition: .25s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+                &.nav-toggler-top{
+                    margin-top: 30%;
+                    transform: rotate(0deg);
+                }
+                &.nav-toggler-bottom{
+                    margin-top: 60%;
+                    transform: rotate(0deg);
+                }
+            }
+
+            // when clicked, change to cross 
+            .clicked{
+                &.nav-toggler-top{
+                    margin-top: 50%;
+                    transform: rotate(135deg);
+                }
+                &.nav-toggler-bottom{
+                    margin-top: 50%;
+                    transform: rotate(-135deg);
+                }
+            }
+
+        }
+        
+        
+    }
+    
+}
+
+
+// strikethrough animation 
+
+
+// medium screen 
+@media screen and (min-width: 768px) {
+    .NavBar{ 
+        // essential for the stikethrough 
+        .nav_links{
+            position: relative;
+            font-size: 1.5rem;
+        }
+
+        .nav_links:hover{
+            opacity: .8;
+            &::after{
+                @include a.strikethrough;
+            }
+        }
+            
+}
+
+// large screen to expand the nav for 13+inch screens
+@media screen and (min-width: 1140px) {
+    .NavBar{
+
+        .nav-toggler{
+            display: none;
+        }
+        
+        .nav-menu{
+            background-color: c.$bg1;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            min-height: 100%;
+            width: 100vw;
+            padding: 5% 0 2% 5%;
+        
+            .nav_links{
+                // padding-right: 1rem;
+                margin-right: 3rem;
+            }
+        }
+    }
+
+    }
+    
+}

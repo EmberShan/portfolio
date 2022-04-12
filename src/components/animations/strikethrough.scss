@@ -1,0 +1,25 @@
+$strike-height: 5px;
+$strike-color: red;
+
+@mixin strikethrough{
+
+    @keyframes strike{
+        0%   { width : 0; }
+        100% { width: 100%; }
+    }
+
+    content: "";
+    width: 100%;
+    height: $strike-height;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $strike-color;
+    // animation 
+    animation-name: strike;
+    animation-duration: 1s;
+    animation-timing-function:cubic-bezier(0.15, 0.84, 0.44, 1);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+}

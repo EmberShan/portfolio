@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+
+.btnWrapper{
+    position: relative;
+    height: auto;
+    .backBtn{
+        display: flex;
+        align-items: center; 
+    
+        outline: none;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        color: #FDF0D5; 
+    
+        position: absolute; 
+        top: 50%; 
+        left: 6%; 
+        transform: translate(-50%, -50%);
+    
+        font-size: 1.4rem;
+    
+        .mobile-hide{
+            display: none;
+        }
+        i{
+            padding-right: 10px;
+            font-size: 2rem;
+        }
+    }
+}
+
+
+.impressionism{
+    background-image: url(./imgs/impressionism/top.png);
+    background-position: 3% 30%;
+} 
+
+
+.mdp{
+    background-image: url(./imgs/mdp/top.png);
+    background-position: 50% 20%;
+} 
+
+.rutabagga{
+    background-image: url(../imgs/pics/ui/320_mockup.png);
+    background-position: 50% 20%;
+    div .backBtn{
+        color: #003049;
+    }
+} 
+
+
+a:hover{
+    color: red; 
+}
+
+#rutabagga{
+    div{
+        .small-img{
+            padding: 0; 
+        }
+    }
+    
+}
+
+
+@media screen and (min-width: 768px) {
+    .btnWrapper{
+    
+        .backBtn{
+            .mobile-hide{
+                display: inline;
+            }
+            &:hover, &:active{
+                color: red; 
+            }
+            
+        }
+    }
+
+    #rutabagga{
+        div{
+            .small-img{
+                padding: 0 15%; 
+            }
+        }
+        
+    }
+}
+

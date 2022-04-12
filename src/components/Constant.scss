@@ -1,0 +1,29 @@
+$cursor: #FFA00F;
+// Navbar colors 
+$nav_bg: #FFA00F;
+$link: #FDF0D5;
+
+// bg and text colros 
+$bg1: #003049;
+$font1: #FDF0D5;
+$bg2: #001926; 
+$font2: #F1FAFF;
+
+// for using scss variables in jsx files 
+:export {
+    cursor: $cursor;
+    nav-bg: $nav-bg;
+    link: $link;
+    bg1: $bg1;
+    font1: $font1;
+    bg2: $bg2;
+    font2: $font2;
+}
+
+// styles
+@mixin no-text-style{
+    list-style: none;
+    text-decoration: none;
+    color: $font1;
+}
+

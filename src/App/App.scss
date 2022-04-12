@@ -1,0 +1,40 @@
+@use '../components/Constant.scss' as c;
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,500;1,900&display=swap');
+
+// mobile first 
+html{
+    scroll-behavior: auto !important;
+}
+
+body{
+    overscroll-behavior: none; //for preventing scrolling and revealing the white space
+    font-family: 'Squada One', sans-serif;
+    -webkit-text-size-adjust: 100%; // trying to fix font size inconsistency on iphones
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1rem;
+}
+
+
+//for medium screen, begin hide cursor and display the custom one
+@media screen and (min-width: 768px) {
+    
+}
+
+// large screen 
+@media screen and (min-width: 1140px) {
+    html{
+        // scroll-snap-type: y mandatory;
+    }
+    // hide original cursor 
+    html, body{
+        &, *{
+        cursor: none;
+        }
+    }
+}
