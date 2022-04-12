@@ -31,7 +31,8 @@ function App(){
       <DotRing/> 
       {isLoading ? (<Loading />) : 
       (
-        <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
+        // <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
+        <BrowserRouter basename="/portfolio">
           <ScrollToTop>
           <Routes>
               <Route exact path="" element={<Page />} />
